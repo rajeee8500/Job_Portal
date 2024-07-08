@@ -17,7 +17,8 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/v1/job/getmyjobs",
+          // "http://localhost:5000/api/v1/job/getmyjobs",
+          "https://job-portal-b-yoy1.onrender.com",
           { withCredentials: true }
         );
         setMyJobs(data.myJobs);
@@ -44,7 +45,8 @@ const MyJobs = () => {
   const handleUpdateJob = async (jobId) => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     await axios
-      .put(`http://localhost:5000/api/v1/job/update/${jobId}`, updatedJob, {
+      // .put(`http://localhost:5000/api/v1/job/update/${jobId}`
+      .put("https://job-portal-b-yoy1.onrender.com", updatedJob, {
         withCredentials: true,
       })
       .then((res) => {
@@ -58,7 +60,9 @@ const MyJobs = () => {
 
   const handleDeleteJob = async (jobId) => {
     await axios
-      .delete(`http://localhost:5000/api/v1/job/delete/${jobId}`, {
+      // .delete(`http://localhost:5000/api/v1/job/delete/${jobId}`,
+      .delete("https://job-portal-b-yoy1.onrender.com",
+         {
         withCredentials: true,
       })
       .then((res) => {

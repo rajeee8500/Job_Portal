@@ -57,7 +57,9 @@ const PostJob = () => {
           };
 
     await axios
-      .post("http://localhost:5000/api/v1/job/post", jobData, {
+      // .post("http://localhost:5000/api/v1/job/post",
+      .post("https://job-portal-b-yoy1.onrender.com",
+         jobData, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",
