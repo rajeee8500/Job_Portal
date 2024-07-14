@@ -18,8 +18,8 @@ const MyApplications = () => {
     try {
       if (user && user.role === "Employer") {
         axios
-          // .get("http://localhost:5000/api/v1/application/employer/getall",
-          .get("https://job-portal-b-yoy1.onrender.com",
+          .get("http://localhost:5000/api/v1/application/employer/getall",
+          // .get("https://job-portal-b-yoy1.onrender.com",
              {
             withCredentials: true,
           })
@@ -28,8 +28,8 @@ const MyApplications = () => {
           });
       } else {
         axios
-          // .get("http://localhost:5000/api/v1/application/jobseeker/getall", 
-          .get("https://job-portal-b-yoy1.onrender.com",
+          .get("http://localhost:5000/api/v1/application/jobseeker/getall", 
+          // .get("https://job-portal-b-yoy1.onrender.com",
             {
             withCredentials: true,
           })
@@ -49,8 +49,8 @@ const MyApplications = () => {
   const deleteApplication = (id) => {
     try {
       axios
-        // .delete(`http://localhost:5000/api/v1/application/delete/${id}`, 
-        .delete("https://job-portal-b-yoy1.onrender.com",
+        .delete(`http://localhost:5000/api/v1/application/delete/${id}`, 
+        // .delete("https://job-portal-b-yoy1.onrender.com",
           {
           withCredentials: true,
         })
