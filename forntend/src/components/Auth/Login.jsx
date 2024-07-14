@@ -14,14 +14,23 @@ const Login = () => {
   const [role, setRole] = useState("");
 
   const { isAuthorized, setIsAuthorized } = useContext(Context);
+  const isLoginned = localStorage.getItem("isLoginned") 
+  // console.log(isAuthorized);
+  if (isLoginned != null || isLoginned == true) {
+    return <Navigate to={"/"} />;
+  }
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
         // "http://localhost:5000/api/v1/user/login",
+<<<<<<< HEAD
         // "https://job-portal-b-yoy1.onrender.com",
         APIURL+"api/v1/user/login",
+=======
+        "https://job-portal-b-yoy1.onrender.com/api/v1/user/login",
+>>>>>>> f96e89f1cf931d20ff01b17fdf604d79ddaae0c0
         { email, password, role },
         {
           headers: {
@@ -35,14 +44,15 @@ const Login = () => {
       setPassword("");
       setRole("");
       setIsAuthorized(true);
+      localStorage.setItem("isLoginned", true)
     } catch (error) {
       toast.error(error.response.data.message);
     }
   };
 
-  if (isAuthorized) {
-    return <Navigate to={"/"} />;
-  }
+  // if (isAuthorized) {
+  //   return <Navigate to={"/"} />;
+  // }
 
   return (
     <>

@@ -9,7 +9,8 @@ const SearchByDate = () => {
 
   const handleSearch = async () => {
     try {
-      let query = `http://localhost:5000/api/v1/job/jobs/sorted?filter=${filter}`;
+      // let query = `http://localhost:5000/api/v1/job/jobs/sorted?filter=${filter}`;
+      let query = `https://job-portal-b-yoy1.onrender.com/api/v1/job/jobs/sorted?filter=${filter}`;
       const response = await axios.get(query);
       setJobs(response.data.jobs);
       setSearched(true);

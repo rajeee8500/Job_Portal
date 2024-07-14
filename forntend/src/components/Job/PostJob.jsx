@@ -57,8 +57,13 @@ const PostJob = () => {
           };
 
     await axios
+<<<<<<< HEAD
       .post("http://localhost:5000/api/v1/job/post",
       // .post("https://job-portal-b-yoy1.onrender.com",
+=======
+      // .post("http://localhost:5000/api/v1/job/post",
+      .post("https://job-portal-b-yoy1.onrender.com/api/v1/job/post",
+>>>>>>> f96e89f1cf931d20ff01b17fdf604d79ddaae0c0
          jobData, {
         withCredentials: true,
         headers: {

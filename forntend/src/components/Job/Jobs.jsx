@@ -11,7 +11,7 @@ const Jobs = () => {
     try {
       axios
         // .get("http://localhost:5000/api/v1/job/getall",
-        .get("https://job-portal-b-yoy1.onrender.com",
+        .get("https://job-portal-b-yoy1.onrender.com/api/v1/job/getall",
            {
           withCredentials: true,
         })

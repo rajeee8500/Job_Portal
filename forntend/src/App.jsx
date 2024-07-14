@@ -26,8 +26,12 @@ const App = () => {
       try {
         const response = await axios.get(
           // "http://localhost:5000/api/v1/user/getuser",
+<<<<<<< HEAD
           // "https://job-portal-b-yoy1.onrender.com",
           APIURL+"api/v1/user/getuser",
+=======
+          "https://job-portal-b-yoy1.onrender.com/api/v1/user/getuser",
+>>>>>>> f96e89f1cf931d20ff01b17fdf604d79ddaae0c0
           {
             withCredentials: true,
           }

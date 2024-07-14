@@ -23,8 +23,12 @@ const Register = () => {
     try {
       const response = await fetch(
         // "http://localhost:5000/api/v1/user/register",
+<<<<<<< HEAD
         // "https://job-portal-b-yoy1.onrender.com",
         APIURL+"api/v1/user/register",
+=======
+        "https://job-portal-b-yoy1.onrender.com/api/v1/user/register",
+>>>>>>> f96e89f1cf931d20ff01b17fdf604d79ddaae0c0
         {
           method: "POST",
           headers: {
