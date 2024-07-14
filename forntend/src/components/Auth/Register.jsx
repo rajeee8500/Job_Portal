@@ -1,3 +1,4 @@
+import { APIURL } from "../../APPCONSTANT";
 import React, { useContext, useState } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
@@ -22,12 +23,13 @@ const Register = () => {
     try {
       const response = await fetch(
         // "http://localhost:5000/api/v1/user/register",
-        "https://job-portal-b-yoy1.onrender.com",
+        // "https://job-portal-b-yoy1.onrender.com",
+        APIURL+"api/v1/user/register",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-          },
+          },  
           body: JSON.stringify({ name, phone, email, role, password }),
           credentials: "include",
         }

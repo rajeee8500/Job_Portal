@@ -1,3 +1,4 @@
+import { APIURL } from "./APPCONSTANT";
 import React, { useContext, useEffect } from "react";
 import "./App.css";
 import { Context } from "./main";
@@ -25,7 +26,8 @@ const App = () => {
       try {
         const response = await axios.get(
           // "http://localhost:5000/api/v1/user/getuser",
-          "https://job-portal-b-yoy1.onrender.com",
+          // "https://job-portal-b-yoy1.onrender.com",
+          APIURL+"api/v1/user/getuser",
           {
             withCredentials: true,
           }

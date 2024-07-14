@@ -1,3 +1,4 @@
+import { APIURL } from "../../APPCONSTANT";
 import React, { useContext, useState } from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLock2Fill } from "react-icons/ri";
@@ -19,7 +20,8 @@ const Login = () => {
     try {
       const { data } = await axios.post(
         // "http://localhost:5000/api/v1/user/login",
-        "https://job-portal-b-yoy1.onrender.com",
+        // "https://job-portal-b-yoy1.onrender.com",
+        APIURL+"api/v1/user/login",
         { email, password, role },
         {
           headers: {

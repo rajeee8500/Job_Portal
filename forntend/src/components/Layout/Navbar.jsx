@@ -7,14 +7,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
-  const { isAuthorized, setIsAuthorized, user } = useContext(Context);
+  const { isAuthorized, user } = useContext(Context);
   const navigateTo = useNavigate();
 
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        // "http://localhost:5000/api/v1/user/logout",
-        "https://job-portal-b-yoy1.onrender.com",
+        "http://localhost:5000/api/v1/user/logout",
+        // "https://job-portal-b-yoy1.onrender.com",
         {
           withCredentials: true,
         }
