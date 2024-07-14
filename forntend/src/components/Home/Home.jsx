@@ -8,8 +8,10 @@ import PopularCategories from "./PopularCategories";
 import PopularCompanies from "./PopularCompanies";
 
 const Home = () => {
-  const { isAuthorized } = useContext(Context);
-  if (!isAuthorized) {
+  // const { isAuthorized } = useContext(Context);
+  const isAuthorized = localStorage.getItem("isLoginned") 
+
+  if (isAuthorized == null || isAuthorized == "") {
     return <Navigate to={"/login"} />;
   }
   return (

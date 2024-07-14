@@ -21,6 +21,8 @@ const Navbar = () => {
       );
       toast.success(response.data.message);
       setIsAuthorized(false);
+      localStorage.setItem("isLoginned", false)
+
       navigateTo("/login");
     } catch (error) {
       toast.error(error.response.data.message), setIsAuthorized(true);
