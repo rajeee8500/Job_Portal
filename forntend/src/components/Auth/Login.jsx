@@ -12,10 +12,10 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
 
-  // const { isAuthorized, setIsAuthorized } = useContext(Context);
-  const isAuthorized = localStorage.getItem("isLoginned") 
-  console.log(isAuthorized);
-  if (isAuthorized != null || isAuthorized == true) {
+  const { isAuthorized, setIsAuthorized } = useContext(Context);
+  const isLoginned = localStorage.getItem("isLoginned") 
+  // console.log(isAuthorized);
+  if (isLoginned != null || isLoginned == true) {
     return <Navigate to={"/"} />;
   }
 
@@ -37,7 +37,7 @@ const Login = () => {
       setEmail("");
       setPassword("");
       setRole("");
-      // setIsAuthorized(true);
+      setIsAuthorized(true);
       localStorage.setItem("isLoginned", true)
     } catch (error) {
       toast.error(error.response.data.message);
