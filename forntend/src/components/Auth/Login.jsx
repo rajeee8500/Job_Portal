@@ -12,7 +12,12 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
 
-  const { isAuthorized, setIsAuthorized } = useContext(Context);
+  // const { isAuthorized, setIsAuthorized } = useContext(Context);
+  const isAuthorized = localStorage.getItem("isLoginned") 
+
+  if (isAuthorized != null || isAuthorized == true) {
+    return <Navigate to={"/"} />;
+  }
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -39,9 +44,9 @@ const Login = () => {
     }
   };
 
-  if (isAuthorized) {
-    return <Navigate to={"/"} />;
-  }
+  // if (isAuthorized) {
+  //   return <Navigate to={"/"} />;
+  // }
 
   return (
     <>
