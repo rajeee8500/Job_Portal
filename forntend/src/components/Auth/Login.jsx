@@ -25,12 +25,8 @@ const Login = () => {
     try {
       const { data } = await axios.post(
         // "http://localhost:5000/api/v1/user/login",
-<<<<<<< HEAD
         // "https://job-portal-b-yoy1.onrender.com",
         APIURL+"api/v1/user/login",
-=======
-        "https://job-portal-b-yoy1.onrender.com/api/v1/user/login",
->>>>>>> f96e89f1cf931d20ff01b17fdf604d79ddaae0c0
         { email, password, role },
         {
           headers: {

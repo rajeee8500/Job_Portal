@@ -17,13 +17,8 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-<<<<<<< HEAD
           "http://localhost:5000/api/v1/job/getmyjobs",
           // "https://job-portal-b-yoy1.onrender.com",
-=======
-          // "http://localhost:5000/api/v1/job/getmyjobs",
-          "https://job-portal-b-yoy1.onrender.com/api/v1/job/getmyjobs",
->>>>>>> f96e89f1cf931d20ff01b17fdf604d79ddaae0c0
           { withCredentials: true }
         );
         setMyJobs(data.myJobs);
@@ -50,16 +45,10 @@ const MyJobs = () => {
   const handleUpdateJob = async (jobId) => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     await axios
-<<<<<<< HEAD
       .put(`http://localhost:5000/api/v1/job/update/${jobId}`,
       // .put("https://job-portal-b-yoy1.onrender.com",
        updatedJob,
          {
-=======
-      // .put(`http://localhost:5000/api/v1/job/update/${jobId}`,
-      .put(`https://job-portal-b-yoy1.onrender.com/api/v1/job/update/${jobId}`,
-         updatedJob, {
->>>>>>> f96e89f1cf931d20ff01b17fdf604d79ddaae0c0
         withCredentials: true,
       })
       .then((res) => {
@@ -73,13 +62,8 @@ const MyJobs = () => {
 
   const handleDeleteJob = async (jobId) => {
     await axios
-<<<<<<< HEAD
       .delete(`http://localhost:5000/api/v1/job/delete/${jobId}`,
       // .delete("https://job-portal-b-yoy1.onrender.com",
-=======
-      // .delete(`http://localhost:5000/api/v1/job/delete/${jobId}`,
-      .delete(`https://job-portal-b-yoy1.onrender.com/api/v1/job/delete/${jobId}`,
->>>>>>> f96e89f1cf931d20ff01b17fdf604d79ddaae0c0
          {
         withCredentials: true,
       })

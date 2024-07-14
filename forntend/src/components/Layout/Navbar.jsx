@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { APIURL } from "../../APPCONSTANT";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -14,8 +15,9 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/v1/user/logout",
+        // "http://localhost:5000/api/v1/user/logout",
         // "https://job-portal-b-yoy1.onrender.com",
+          APIURL+"api/v1/user/logout",
         {
           withCredentials: true,
         }
