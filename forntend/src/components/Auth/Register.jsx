@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        // "http://localhost:5000/api/v1/user/register",
+        "http://localhost:5000/api/v1/user/register",
         // "https://job-portal-b-yoy1.onrender.com",
         APIURL+"api/v1/user/register",
         {
